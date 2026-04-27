@@ -1,0 +1,24 @@
+Codigo lab 2 
+
+// C++ code
+//
+void setup() {
+  pinMode (2, INPUT) ;  // Configura el pin 2 como entrada digital (lee el estado del pulsador)
+  pinMode (3, OUTPUT) ; // Configura el pin 3 como salida digital (controla el LED)
+}
+
+void loop() {
+  
+  // Lee el estado del pin 2 (pulsador) y verifica si está en nivel bajo (LOW)
+  // LOW significa que el pulsador está presionado cuando se usa conexión tipo pull-up
+  
+  if (digitalRead(2) == HIGH){
+    digitalWrite(3, HIGH) ;  // Si el pulsador está presionado, enciende el LED (pin 3 en alto)
+  }
+  
+  else {
+    digitalWrite(3, LOW);  // Si el pulsador no está presionado, apaga el LED (pin 3 en bajo) 
+  }
+     
+}
+
